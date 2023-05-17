@@ -10,7 +10,7 @@ async def make_request(query: str, api_key: str, sources: list):
     try:
       headers = {'X-API-Key': api_key}
       async with aiohttp.ClientSession() as session:
-          async with session.get(f'', headers=headers) as response:
+          async with session.get(f'https://api.ditto.fyi/get/raw_query?q={query}&s={",".join(sources)}', headers=headers) as response:
               if response.status == 200:
                   data = await response.json()
                   return data
