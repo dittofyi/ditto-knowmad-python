@@ -2,6 +2,17 @@
 
 Python Client for the Ditto API.
 
+## Installation
+
+You can install this package with:
+
+```bash
+pip install git+https://github.com/dittofyi/ditto-knowmad-python.git
+```
+
+We're not publishing it on PyPI yet. If you're working with us, we'll let you know
+when it's time to update. You may need to `pip uninstall ditto_knowmad` before reinstalling
+from here.
 
 ## Usage
 
