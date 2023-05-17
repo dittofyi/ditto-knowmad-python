@@ -27,8 +27,8 @@ Below is an example list with all currently possible sources
 ```python
 sources = [
   "tweets", # Twitter
-  "tiktok_comments", # TikTok Comments
-  "reddit_posts", # Reddit Posts
+  "tiktok_comments", # TikTok comments
+  "reddit_posts", # Reddit posts
 ]
 ```
 
