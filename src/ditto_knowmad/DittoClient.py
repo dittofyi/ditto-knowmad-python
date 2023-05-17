@@ -1,7 +1,7 @@
 import asyncio
 from enum import Enum
 
-from backend_requests import make_request
+from .backend_requests import make_request
 
 class ApiKeyException(Exception):
     pass
