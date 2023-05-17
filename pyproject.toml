@@ -16,3 +16,7 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
+
+[project.packages]
+name = "ditto_knowmad"
+include = ["source/ditto_knowmad"]
