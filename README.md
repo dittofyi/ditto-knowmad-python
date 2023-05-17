@@ -5,7 +5,7 @@ Python Client for the Ditto API.
 
 ## Usage
 
-You can interact with our API simply with the commands.
+You can interact with our API as shown below.
 
 To get tweets about Lebron James:
 ```python
@@ -23,7 +23,7 @@ If you don't have an API key, email team@ditto.fyi to start working with us.
 
 ## Possible Sources (updated 5/17/23)
 
-Below is an example list with all currently possible sources
+Below is an example list with all currently possible sources. Use any or all of these in your requests.
 ```python
 sources = [
   "tweets", # Twitter
