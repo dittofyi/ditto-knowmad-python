@@ -31,3 +31,7 @@ sources = [
   "reddit_posts", # Reddit Posts
 ]
 ```
+
+## License
+
+This repo is under the [MIT License](https://opensource.org/license/mit/).
