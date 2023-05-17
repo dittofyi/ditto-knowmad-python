@@ -1,0 +1,5 @@
+packaging.md
+.env
+test.py
+**/__pycache__/
+*.pyc
