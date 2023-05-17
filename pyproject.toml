@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "ditto-knowmad"
+name = "ditto_knowmad"
 version = "0.0.1"
 authors = [
   { name="Ditto team", email="team@ditto.fyi" },
