@@ -11,7 +11,7 @@ To get tweets about Lebron James:
 ```python
 import os
 
-from ditto-knowmad import DittoClient
+from ditto_knowmad.DittoClient import DittoClient
 
 client = DittoClient(api_key=os.getenv('<YOUR-API-KEY-HERE>'))
 results = client.get_posts_from_source(query="lebron", sources=["tweets"])
