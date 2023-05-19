@@ -18,7 +18,7 @@ class DittoClient():
 
         return response
 
-    def get_tweets_by_handle(self, query: str) -> object
+    def get_tweets_by_handle(self, query: str) -> object:
         if not self.api_key:
                 raise ApiKeyException("No API Key was set when instantiating DittoClient object.")
         
