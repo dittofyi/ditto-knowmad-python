@@ -22,6 +22,6 @@ class DittoClient():
         if not self.api_key:
                 raise ApiKeyException("No API Key was set when instantiating DittoClient object.")
         
-        response = asyncio.run(make_request(query=query, api_key=self.api_key))
+        response = asyncio.run(make_handle_request(query=query, api_key=self.api_key))
 
         return response
