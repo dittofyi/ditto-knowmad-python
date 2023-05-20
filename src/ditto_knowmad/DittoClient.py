@@ -1,7 +1,7 @@
 import asyncio
 from enum import Enum
 
-from .backend_requests import make_request, make_sync_request, make_handle_request
+from .backend_requests import make_request, make_sync_request, make_handle_request, make_sync_handle_request
 
 class ApiKeyException(Exception):
     pass
@@ -22,10 +22,14 @@ class DittoClient():
 
         return response
 
-    def get_tweets_by_handle(self, query: str) -> object:
+    def get_tweets_by_handle(self, query: str, sync=False) -> object:
         if not self.api_key:
                 raise ApiKeyException("No API Key was set when instantiating DittoClient object.")
         
-        response = asyncio.run(make_handle_request(query=query, api_key=self.api_key))
+        if sync:
+            print("Waiting on API...")
+            response = make_sync_handle_request(query=query, api_key=self.api_key)
+        else:
+            response = asyncio.run(make_handle_request(query=query, api_key=self.api_key))
 
         return response

@@ -39,7 +39,7 @@ def make_sync_request(query: str, api_key: str, sources: list):
             raise BackendResponseException(f"Server error: {response.status_code}")
     except requests.exceptions.RequestException as e:
         raise ClientRequestException(f"Request failed {e}")
-    
+
 async def make_handle_request(query: str, api_key: str):
     try:
       headers = {'X-API-Key': api_key}
@@ -57,3 +57,18 @@ async def make_handle_request(query: str, api_key: str):
     except aiohttp.ClientError as e:
         raise ClientRequestException(f"Request failed {e}")
             
+def make_sync_handle_request(query: str, api_key: str):
+    try:
+        headers = {'X-API-Key': api_key}
+        response = requests.get(f'https://api.ditto.fyi/get/by_twitter_handle?q={query}', headers=headers)
+        if response.status_code == 200:
+            data = response.json()
+            return data
+        elif response.status_code == 400:
+            raise BackendResponseException("Bad Request: Check your request parameters.")
+        elif response.status_code == 401:
+            raise BackendResponseException("Unauthorized: Invalid Credentials, check your API key")
+        else:
+            raise BackendResponseException(f"Server error: {response.status_code}")
+    except requests.exceptions.RequestException as e:
+        raise ClientRequestException(f"Request failed {e}")
