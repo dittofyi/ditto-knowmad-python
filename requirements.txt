@@ -2,3 +2,4 @@ build
 pandas
 python-dotenv
 hypercorn
+jupyter
